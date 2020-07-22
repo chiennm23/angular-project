@@ -1,0 +1,19 @@
+<div class="container">
+<app-navba></app-navba>
+<h2>Today's article</h2>
+<hr>
+<div *ngFor="let art of articles">
+  <a href="{{art.url}}" target="_blank">{{art.title}}</a>
+  <app-likes></app-likes>
+</div>
+<hr>
+<div>
+  <p>Article: </p>
+  <textarea [(ngModel)]="title" cols="70"></textarea><br>
+  <p>Url: </p>
+  <textarea [(ngModel)]="url" cols="70"></textarea>
+  <br>
+  <button (click)="addArticle()" class="btn btn-primary">Add</button>
+</div>
+@CodeGym, 2019
+</div>
